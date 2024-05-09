@@ -10,18 +10,21 @@ double division(int a,float b);
 bool verificacion(float a,float b);
 
 int main(){
-    ingresardatos();
+    do{
+        ingresardatos();
+    }while(true);
     return 0;
 }
 
 void ingresardatos(){
     int x,a,b;
     string mensaje;
-    mensaje = "Bienvenido al menu de operaciones\n";
+    mensaje = "\nBienvenido al menu de operaciones\n";
     mensaje+="1-) Sumar\n";
     mensaje+="2-) Restar\n";
-    mensaje+="5-) Multiplicar\n";
+    mensaje+="3-) Multiplicar\n";
     mensaje+="4-) Dividir\n";
+    mensaje+="5-) Verificar\n";
     
     cout<<mensaje;
     cin>>x;
@@ -38,7 +41,7 @@ void ingresardatos(){
         cout<<"La suma es:"<<rs;
         break;      
     case 2:
-        int rr;
+        float rr;
         cout<<"Ingrese 2 numeros a restar:"<<endl;
         cout<<"Ingrese numero 1:";
         cin>>a;
@@ -47,6 +50,9 @@ void ingresardatos(){
         rr=resta(a,b);
         cout<<"La resta es:"<<rr;
         break;
+    case 6:
+        cout<<"Saliendo:";
+        exit (0);
     default:
         break;
     }
@@ -61,7 +67,4 @@ int suma (int a,int b){
 float resta(float a,float b){
     return a-b;
 }
- 
-
-
 
