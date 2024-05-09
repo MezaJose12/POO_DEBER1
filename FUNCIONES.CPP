@@ -24,7 +24,26 @@ void ingresardatos(){
     mensaje+="4-) Dividir\n";
     
     cout<<mensaje;
-    cin>>x;  
+    cin>>x;
+        switch (x)
+    {
+    case 1:
+        int rs;
+        cout<<"Ingrese 2 numeros a sumar:"<<endl;
+        cout<<"Ingrese numero 1:";
+        cin>>a;
+        cout<<"Ingrese numero 2:";
+        cin>>b;
+        rs=suma(a,b);
+        cout<<"La suma es:"<<rs;
+        break;      
+    default:
+        break;
+    }
+}
+
+int suma (int a,int b){
+    return a+b;
 }
 
 
