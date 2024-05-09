@@ -8,7 +8,7 @@ int suma(int a,int b);
 float resta(float a,float b);
 float Multiplicar(int a,float b);
 double division(float a,float b);
-bool verificacion(float a,float b);
+bool verificacion(int a,float b);
 
 int main(){
     do{
@@ -21,6 +21,7 @@ void ingresardatos(){
     int x,a,b;
     int rs;
     float rr;
+    bool vr=false;
     string mensaje;
     mensaje = "\nBienvenido al menu de operaciones\n";
     mensaje+="1-) Sumar\n";
@@ -64,6 +65,15 @@ void ingresardatos(){
         dv=division(ml,rr);
         cout<<"Resultado de la operacion:["<<ml<<"]/["<<rr<<"]="<<dv<<endl;
         break;
+    case 5:
+        cout<<"Verificar si la suma es mayor a la resta"<<endl;
+        vr=verificacion(rs, rr);
+        if(!vr){
+            cout<<"La suma no es mayor a la resta."<<endl;
+        }else{
+            cout<<"La suma es mayor a la resta."<<endl;
+        }
+        break;
         
     case 6:
         cout<<"Saliendo:";
@@ -90,4 +100,8 @@ float Multiplicar(int a,float b){
 double division(float a,float b){
     return a/b;
     
+}
+
+bool verificacion(int a, float b) {
+    return a>b;
 }
