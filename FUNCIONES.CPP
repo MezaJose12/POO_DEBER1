@@ -6,6 +6,7 @@ using namespace std;
 void ingresardatos();
 int suma(int a,int b);
 float resta(float a,float b);
+float Multiplicar(int a,float b);
 double division(int a,float b);
 bool verificacion(float a,float b);
 
@@ -18,6 +19,8 @@ int main(){
 
 void ingresardatos(){
     int x,a,b;
+    int rs;
+    float rr;
     string mensaje;
     mensaje = "\nBienvenido al menu de operaciones\n";
     mensaje+="1-) Sumar\n";
@@ -31,7 +34,6 @@ void ingresardatos(){
         switch (x)
     {
     case 1:
-        int rs;
         cout<<"Ingrese 2 numeros a sumar:"<<endl;
         cout<<"Ingrese numero 1:";
         cin>>a;
@@ -41,7 +43,6 @@ void ingresardatos(){
         cout<<"La suma es:"<<rs;
         break;      
     case 2:
-        float rr;
         cout<<"Ingrese 2 numeros a restar:"<<endl;
         cout<<"Ingrese numero 1:";
         cin>>a;
@@ -49,6 +50,12 @@ void ingresardatos(){
         cin>>b;
         rr=resta(a,b);
         cout<<"La resta es:"<<rr;
+        break;
+    case 3:
+        float ml;
+        cout<<"Multiplicar suma por resta:"<<endl;
+        ml=Multiplicar(rs,rr);
+        cout<<"Resultado de la operacion:["<<rs<<"]*["<<rr<<"]="<<ml<<endl;
         break;
     case 6:
         cout<<"Saliendo:";
@@ -68,3 +75,6 @@ float resta(float a,float b){
     return a-b;
 }
 
+float Multiplicar(int a,float b){
+    return a*b;
+}
