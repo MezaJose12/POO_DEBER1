@@ -14,6 +14,19 @@ int main(){
     return 0;
 }
 
+void ingresardatos(){
+    int x,a,b;
+    string mensaje;
+    mensaje = "Bienvenido al menu de operaciones\n";
+    mensaje+="1-) Sumar\n";
+    mensaje+="2-) Restar\n";
+    mensaje+="5-) Multiplicar\n";
+    mensaje+="4-) Dividir\n";
+    
+    cout<<mensaje;
+    cin>>x;  
+}
+
 
 
 
