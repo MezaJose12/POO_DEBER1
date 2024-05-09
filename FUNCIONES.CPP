@@ -37,15 +37,31 @@ void ingresardatos(){
         rs=suma(a,b);
         cout<<"La suma es:"<<rs;
         break;      
+    case 2:
+        int rr;
+        cout<<"Ingrese 2 numeros a restar:"<<endl;
+        cout<<"Ingrese numero 1:";
+        cin>>a;
+        cout<<"Ingrese numero 2:";
+        cin>>b;
+        rr=resta(a,b);
+        cout<<"La resta es:"<<rr;
+        break;
     default:
         break;
     }
+
+    
 }
 
 int suma (int a,int b){
     return a+b;
 }
 
+float resta(float a,float b){
+    return a-b;
+}
+ 
 
 
 
