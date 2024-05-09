@@ -7,7 +7,7 @@ void ingresardatos();
 int suma(int a,int b);
 float resta(float a,float b);
 float Multiplicar(int a,float b);
-double division(int a,float b);
+double division(float a,float b);
 bool verificacion(float a,float b);
 
 int main(){
@@ -28,6 +28,7 @@ void ingresardatos(){
     mensaje+="3-) Multiplicar\n";
     mensaje+="4-) Dividir\n";
     mensaje+="5-) Verificar\n";
+    mensaje+="6-) Salir\n";
     
     cout<<mensaje;
     cin>>x;
@@ -57,6 +58,13 @@ void ingresardatos(){
         ml=Multiplicar(rs,rr);
         cout<<"Resultado de la operacion:["<<rs<<"]*["<<rr<<"]="<<ml<<endl;
         break;
+    case 4:
+        double dv;
+        cout<<"Dividir la multiplicacion para la resta:"<<endl;
+        dv=division(ml,rr);
+        cout<<"Resultado de la operacion:["<<ml<<"]/["<<rr<<"]="<<dv<<endl;
+        break;
+        
     case 6:
         cout<<"Saliendo:";
         exit (0);
@@ -77,4 +85,9 @@ float resta(float a,float b){
 
 float Multiplicar(int a,float b){
     return a*b;
+}
+
+double division(float a,float b){
+    return a/b;
+    
 }
